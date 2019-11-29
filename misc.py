@@ -38,3 +38,16 @@ def reduce_size(im, n):
         new_shape = (shape[0]//n, shape[1]//n, 3)
         new = np.array(new).reshape(new_shape)
     return new
+
+def stitch(imgs, in_shape, tile_shape):
+    out_shape = tuple(list(i*j for i, j in zip(in_shape, tile_shape))+[4])
+    large_img = np.zeros(out_shape)
+    i, j = 0, 0
+    w, h = tile_shape
+    for img in imgs:
+        large_img[j:j+w, i:i+h] = img
+        i+=w
+        if i == in_shape[1]*tile_shape[1]:
+            j+=h
+            i = 0
+    return large_img

@@ -13,14 +13,13 @@ for path in paths:
             images.append(img)
 
 im = imread(PATH+"main.png", 0)
-new = reduce_size(im, 7)
+new = reduce_size(im, 10)
 colors = []
 for i, img in enumerate(images):
     colors.append((i, get_average_color(img)))
 
 final = []
-m = new.shape[0]
-r = new.shape[1]
+m, r = new.shape[:2]
 for i in range(m):
     for j in range(r):
         index = 0
@@ -34,17 +33,7 @@ for i in range(m):
         final.append(images[index])
 
 final = np.array(final)
-end = np.zeros((m*16, r*16, 4))
-w, h = 0, 0
-for img in final:
-    try:
-        end[h:h+16, w:w+16] = img
-    except:
-        pass
-    w += 16
-    if w == r*16:
-        h += 16
-        w = 0
+end = stitch(final, (m, r), (16, 16))
 
 plt.imshow(end)
 plt.show()
