@@ -2,9 +2,12 @@ import os
 import sys
 import cv2
 import numpy as np 
-from matplotlib.image import imread
+from matplotlib.image import imread, imsave
 import math
 import matplotlib.pyplot as plt
+import pickle
+from PIL import Image
+from tqdm import tqdm
 
 def dist(vec1, vec2):
     vec1 = np.array(vec1)
@@ -40,14 +43,27 @@ def reduce_size(im, n):
     return new
 
 def stitch(imgs, in_shape, tile_shape):
-    out_shape = tuple(list(i*j for i, j in zip(in_shape, tile_shape))+[4])
-    large_img = np.zeros(out_shape)
-    i, j = 0, 0
-    w, h = tile_shape
-    for img in imgs:
-        large_img[j:j+w, i:i+h] = img
-        i+=w
-        if i == in_shape[1]*tile_shape[1]:
-            j+=h
-            i = 0
-    return large_img
+    try:
+        out_shape = tuple(list(i*j for i, j in zip(in_shape, tile_shape))+[4])
+        large_img = np.zeros(out_shape)
+        i, j = 0, 0
+        w, h = tile_shape
+        for img in imgs:
+            large_img[j:j+w, i:i+h] = img
+            i+=w
+            if i == in_shape[1]*tile_shape[1]:
+                j+=h
+                i = 0
+        return large_img
+    except:
+        out_shape = tuple(list(i*j for i, j in zip(in_shape, tile_shape))+[3])
+        large_img = np.zeros(out_shape)
+        i, j = 0, 0
+        w, h = tile_shape
+        for img in imgs:
+            large_img[j:j+w, i:i+h] = img
+            i+=w
+            if i == in_shape[1]*tile_shape[1]:
+                j+=h
+                i = 0
+        return large_img
