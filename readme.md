@@ -20,5 +20,5 @@ recreate images by tiling smaller images
  6. enter what type of tile you want, you can see the available tile types in the Tiles folder
  7. enter the tile size you want. some tile types only support specific size while others support any size. Large tile could result in a memory error
  8. enter how much you want to scale down the resolution of the input image. put 1 if you want to keep the original resolution
- 9. find you tiled image in the output folder.
+ 9. find your tiled image in the output folder.
  
