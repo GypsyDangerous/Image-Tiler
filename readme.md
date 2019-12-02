@@ -12,5 +12,13 @@ recreate images by tiling smaller images
  - misc.py - This file contains all the imports, and helper functions used in the tiler.
  
 # Installation and usage
-to use 
+ 1. clone the repo with `git clone https://github.com/GypsyDangerous/Image-Tiler.git`
+ 2. cd into the repo
+ 3. install all requirements from requirements.txt
+ 4. run main.py with your preffered python executor
+ 5. enter the name of you image
+ 6. enter what type of tile you want, you can see the available tile types in the Tiles folder
+ 7. enter the tile size you want. some tile types only support specific size while others support any size. Large tile could result in a memory error
+ 8. enter how much you want to scale down the resolution of the input image. put 1 if you want to keep the original resolution
+ 9. find you tiled image in the output folder.
  
