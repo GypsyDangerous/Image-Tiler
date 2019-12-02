@@ -6,7 +6,6 @@ from matplotlib.image import imread, imsave
 import math
 import matplotlib.pyplot as plt
 import pickle
-from PIL import Image
 from tqdm import tqdm
 
 def dist(vec1, vec2):
