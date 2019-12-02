@@ -23,6 +23,9 @@ recreate images by tiling smaller images
  8. enter how much you want to scale down the resolution of the input image. put 1 if you want to keep the original resolution
  9. find your tiled image in the output folder.
  
+# Credit
+This project was inspired by [This](https://github.com/nuno-faria/tiler) repo but none of the code was copied. Some, but not all of the tiles have been copied, including the circles and the at symbols. I am in the process of asking [The creator of that repo](https://github.com/nuno-faria) if I can use their tiles. If they say no I will remove those tiles until I find my own. I found said repo thanks to [This](https://www.youtube.com/watch?v=CHd4K_3rqKE) video.
+ 
 # Examples
 Due to fact that the tiler is stitching together images to make one large image. the output image will `tile size` times larger than the input image    
 
