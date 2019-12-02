@@ -1,6 +1,7 @@
 # Image Tiler
 recreate images by tiling smaller images
 
+
 # Files and Folders
 ## Folders
  - Images - place the image you want to tile here. there are some example images already in it.
@@ -22,3 +23,20 @@ recreate images by tiling smaller images
  8. enter how much you want to scale down the resolution of the input image. put 1 if you want to keep the original resolution
  9. find your tiled image in the output folder.
  
+# Examples
+Due to fact that the tiler is stitching together images to make one large image. the output image will `tile size` times larger than the input image    
+
+  
+Original Image   
+![](images/cat.jpg)  
+Scaled down to half the size of the original and tilled with 16x16 circles    
+
+
+Tiled Image ![](output/circle_out.png)  
+
+
+Original Image ![](images/main.png)
+Scaled down to 1/5 the size of the original and tiled with 8x8 minecraft blocks
+Tiled Image ![](output/8_tile.png)
+scaled down to 1/10 the size of the original and tiled with 16x16 minecraft blocks
+Tiled Image ![](output/pixel_art.png)
