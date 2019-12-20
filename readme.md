@@ -1,5 +1,5 @@
 # Image Tiler
-recreate images by tiling smaller images
+A simple program to tile small images together to build a bigger image
 
 
 # Files and Folders
