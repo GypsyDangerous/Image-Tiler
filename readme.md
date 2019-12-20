@@ -23,9 +23,6 @@ recreate images by tiling smaller images
  8. enter how much you want to scale down the resolution of the input image. put 1 if you want to keep the original resolution
  9. find your tiled image in the output folder.
  
-# Credit
-This project was inspired by [This](https://github.com/nuno-faria/tiler) repo but none of the code was copied. Some, but not all of the tiles have been copied, including the circles and the at symbols. I found said repo thanks to [This](https://www.youtube.com/watch?v=CHd4K_3rqKE) video.
- 
 # Examples
 Due to fact that the tiler is stitching together images to make one large image. the output image will `tile size` times larger than the input image    
 
@@ -43,3 +40,7 @@ Scaled down to 1/5 the size of the original and tiled with 8x8 minecraft blocks
 Tiled Image ![](output/8_tile.png)
 scaled down to 1/10 the size of the original and tiled with 16x16 minecraft blocks
 Tiled Image ![](output/pixel_art.png)
+
+
+# Credit
+This project was inspired by [This](https://github.com/nuno-faria/tiler) repo but none of the code was copied. Some, but not all of the tiles have been copied, including the circles and the at symbols. I found said repo thanks to [This](https://www.youtube.com/watch?v=CHd4K_3rqKE) video.
